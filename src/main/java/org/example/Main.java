@@ -31,20 +31,17 @@ public class Main {
 
 
     public static int PascalTriangle(final int c, final int r) {
-        int result = 0;
-
         if (c > r || c < 0) {
             System.out.println("Bad example of columns: " + c + " and rows: " + r);
             return 0;
         }
-
         if (c == r || c == 0) {
-            return result = 1;
+            return 1;
         } else if (c == 1 || (c + 1) == r) {
-            return result = r;
+            return r;
         }
 
-        return result = PascalTriangle(c - 1, r - 1) + PascalTriangle(c, r - 1);
+        return PascalTriangle(c - 1, r - 1) + PascalTriangle(c, r - 1);
     }
 
     public static boolean ParenthesesBalancing(List<Character> listOfChars) {
